@@ -1,24 +1,39 @@
 import "./assets/css/App.css";
 
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import QuestionForm from "./components/QuestionForm";
-import Hero from "./components/Hero";
-import Navegation from "./components/Navegation";
+import Root from "./pages/Root";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import ErrorPage from "./pages/ErrorPage";
+import HomePage from "./pages/HomePage";
+import CreatePage from "./pages/CreatePage";
+import AboutPage from "./pages/AboutPage";
 
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        //path: "/", another way to write it
+        index: true,
+        element: <HomePage />,
+      },
+
+      {
+        path: "/create",
+        element: <CreatePage />,
+      },
+      {
+        path: "/about",
+        element: <AboutPage />,
+      },
+    ],
+  },
+]);
 function App() {
   return (
     <>
-      <Navegation />
-      <Hero />
-      <Container>
-        <Row>
-          <Col>
-            <QuestionForm />
-          </Col>
-        </Row>
-      </Container>
+      <RouterProvider router={router} />
     </>
   );
 }
