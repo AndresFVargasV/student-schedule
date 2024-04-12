@@ -1,15 +1,16 @@
 import "./assets/css/App.css";
-import Navbar from "./components/Navbar";
+
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import QuestionForm from "./components/QuestionForm";
 import Hero from "./components/Hero";
+import Navegation from "./components/Navegation";
 
 function App() {
   return (
     <>
-      <Navbar />
+      <Navegation />
       <Hero />
       <Container>
         <Row>

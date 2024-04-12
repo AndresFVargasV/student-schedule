@@ -7,7 +7,7 @@ export default function Hero() {
         <Carousel.Item>
           <CarouselImage url="./img/slide1.webp" />
           <Carousel.Caption>
-            <h3>First slide label</h3>
+            <h3>Estudia de manera organizada</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
