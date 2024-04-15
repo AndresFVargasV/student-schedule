@@ -15,7 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 function CreatePage() {
   //manejar las horas
   const times = Array.from({ length: 48 }, (_, index) => {
@@ -26,7 +26,7 @@ function CreatePage() {
 
   //fin manejar las horas
 
-  const { register, handleSubmit } = useForm({ mode: "onChange" });
+  const { register, handleSubmit, control } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => {
     console.log(data);
@@ -76,34 +76,42 @@ function CreatePage() {
                   </Label>
 
                   <div className="flex space-x-4 justify-center items-center">
-                    <Select>
-                      <SelectTrigger id="hinicio">
-                        <SelectValue placeholder="Hora Inicial" />
-                      </SelectTrigger>
-                      <SelectContent position="popper">
-                        {times.map((time) => (
-                          <SelectItem
-                            key={time}
-                            value={time}
-                            {...register("horaIn")}
-                          >
-                            {time}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                    <Select>
-                      <SelectTrigger id="hfinal">
-                        <SelectValue placeholder="Hora Final" />
-                      </SelectTrigger>
-                      <SelectContent position="popper">
-                        {times.map((time) => (
-                          <SelectItem key={time} value={time}>
-                            {time}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
+                    <Controller
+                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <SelectTrigger id="hinicio">
+                            <SelectValue placeholder="Hora Inicial" />
+                          </SelectTrigger>
+                          <SelectContent position="popper">
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time}>
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
+                    <Controller
+                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <SelectTrigger id="hinicio">
+                            <SelectValue placeholder="Hora Final" />
+                          </SelectTrigger>
+                          <SelectContent position="popper">
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time}>
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
                   </div>
                 </div>
               </div>
