@@ -15,7 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 function CreatePage() {
   //manejar las horas
   const times = Array.from({ length: 48 }, (_, index) => {
