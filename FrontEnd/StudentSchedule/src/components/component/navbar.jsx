@@ -26,11 +26,11 @@ export function Navbar() {
       </div>
       <div className="ml-auto">
         <Button
-          className="w-8 h-8 rounded-full border-2 border-gray-100"
+          className="w-8 h-8 rounded-full border-2 border-gray-100 mt-8"
           size="icon"
           variant="outline"
         >
-          <Avatar>
+          <Avatar >
             <AvatarImage src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdhIcaHgkKj0FOr7h97-jpDe205Uwx-9SIDRIKOANtpg&s" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>

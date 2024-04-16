@@ -42,11 +42,11 @@ function CreatePage() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className=" animate__animated animate__bounceInDown">
-        <div className="flex justify-center items-center h-screen">
-          <Card className="w-[750px]">
+      <form onSubmit={handleSubmit(onSubmit)} className=" animate__animated animate__bounceInDown ">
+        <div className="flex justify-center items-center h-screen ">
+          <Card className="w-[750px] bg-gray-100">
             <CardHeader>
-              <CardTitle className="text-3xl">
+              <CardTitle className="text-3xl flex justify-center">
                 Crea tu plan de estudios
               </CardTitle>
             </CardHeader>
@@ -56,6 +56,7 @@ function CreatePage() {
                   <Label htmlFor="carrera">Carrera</Label>
                   <Input
                     id="carrera"
+                    className="bg-zinc-50"
                     placeholder="Carrera"
                     {...register("carrera", {
                       required: "Por favor, ingrese la carrera",
@@ -76,6 +77,7 @@ function CreatePage() {
                   <Label htmlFor="tema">Tema</Label>
                   <Input
                     id="tema"
+                    className="bg-zinc-50"
                     placeholder="Tema"
                     {...register("tema", {
                       required: true,
@@ -100,14 +102,16 @@ function CreatePage() {
                     <Controller
                       name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
                       control={control}
+
                       render={({ field }) => (
-                        <Select onValueChange={field.onChange} value={field.value}>
-                          <SelectTrigger id="hinicio">
+                        <Select onValueChange={field.onChange} value={field.value}  >
+
+                          <SelectTrigger id="hinicio" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Inicial" />
                           </SelectTrigger>
-                          <SelectContent position="popper">
+                          <SelectContent position="popper" >
                             {times.map((time) => (
-                              <SelectItem key={time} value={time}>
+                              <SelectItem key={time} value={time} >
                                 {time}
                               </SelectItem>
                             ))}
@@ -125,7 +129,7 @@ function CreatePage() {
                       required
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}>
-                          <SelectTrigger id="hinicio">
+                          <SelectTrigger id="hfinal" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Final" />
                           </SelectTrigger>
                           <SelectContent position="popper">
