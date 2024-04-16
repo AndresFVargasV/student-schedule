@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button";
+import { ReloadIcon } from "@radix-ui/react-icons"
+import 'animate.css';
 import {
   Card,
   CardContent,
@@ -16,6 +18,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useForm, Controller } from "react-hook-form";
+import { useState } from "react";
 function CreatePage() {
   //manejar las horas
   const times = Array.from({ length: 48 }, (_, index) => {
@@ -27,14 +30,19 @@ function CreatePage() {
   //fin manejar las horas
 
   const { register, handleSubmit, control, formState: { errors } } = useForm({ mode: "onChange" });
+  const [isLoading, setIsLoading] = useState(false);
 
   const onSubmit = (data) => {
-    console.log(data);
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      console.log(data);
+    }, 2000);
   };
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className=" animate__animated animate__bounceInDown">
         <div className="flex justify-center items-center h-screen">
           <Card className="w-[750px]">
             <CardHeader>
@@ -59,7 +67,7 @@ function CreatePage() {
                     })}
                   />
                   {errors.carrera && (
-                    <span className="mt-2 text-sm text-red-500 font-bold peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                    <span className="mt-2 text-sm text-red-500 font-bold peer-[&:not(:placeholder-shown):not(:focus):invalid]:block animate__animated animate__slideInDown">
                       {errors.carrera.message}
                     </span>
                   )}
@@ -75,7 +83,7 @@ function CreatePage() {
                   />
                   {
                     errors.tema && (
-                      <span className="mt-2 text-sm text-red-500 font-bold peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                      <span className="mt-2 text-sm text-red-500 font-bold peer-[&:not(:placeholder-shown):not(:focus):invalid]:block animate__animated animate__slideInDown">
                         Por favor, ingrese un tema
                       </span>
                     )
@@ -135,7 +143,16 @@ function CreatePage() {
               </div>
             </CardContent>
             <CardFooter className="flex justify-end">
-              <Button>Crear</Button>
+              <Button onClick={handleSubmit} disabled={isLoading}>
+                {isLoading ? (
+                  <>
+                    <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+                    Cargando
+                  </>
+                ) : (
+                  'Crear'
+                )}
+              </Button>
             </CardFooter>
           </Card>
         </div>
