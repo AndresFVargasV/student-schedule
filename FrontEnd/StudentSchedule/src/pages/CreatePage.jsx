@@ -26,7 +26,7 @@ function CreatePage() {
 
   //fin manejar las horas
 
-  const { register, handleSubmit, control } = useForm({ mode: "onChange" });
+  const { register, handleSubmit, control, formState: { errors } } = useForm({ mode: "onChange" });
 
   const onSubmit = (data) => {
     console.log(data);
@@ -58,6 +58,11 @@ function CreatePage() {
                       },
                     })}
                   />
+                  {errors.carrera && (
+                    <span className="mt-2 text-sm text-red-500 font-bold peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                      {errors.carrera.message}
+                    </span>
+                  )}
                 </div>
                 <div className="flex flex-col space-y-1.5">
                   <Label htmlFor="tema">Tema</Label>
@@ -68,6 +73,14 @@ function CreatePage() {
                       required: true,
                     })}
                   />
+                  {
+                    errors.tema && (
+                      <span className="mt-2 text-sm text-red-500 font-bold peer-[&:not(:placeholder-shown):not(:focus):invalid]:block">
+                        Por favor, ingrese un tema
+                      </span>
+                    )
+                  }
+
                 </div>
 
                 <div>
@@ -92,11 +105,16 @@ function CreatePage() {
                             ))}
                           </SelectContent>
                         </Select>
+
                       )}
+
                     />
+
+
                     <Controller
                       name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
                       control={control}
+                      required
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}>
                           <SelectTrigger id="hinicio">
