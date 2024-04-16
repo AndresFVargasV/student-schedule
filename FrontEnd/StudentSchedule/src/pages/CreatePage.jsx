@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ReloadIcon } from "@radix-ui/react-icons"
+import axios from 'axios';
 import 'animate.css';
 import {
   Card,
@@ -32,12 +33,25 @@ function CreatePage() {
   const { register, handleSubmit, control, formState: { errors } } = useForm({ mode: "onChange" });
   const [isLoading, setIsLoading] = useState(false);
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     setIsLoading(true);
-    setTimeout(() => {
+
+    console.log(data); // Imprime los datos para depuración
+
+    try {
+      // Realiza la petición POST utilizando axios
+      const response = await axios.post('https://localhost:8000/study-plan', data);
+      console.log('Respuesta del servidor:', response.data);
+      // Aquí podrías manejar la respuesta y actualizar el estado o UI según sea necesario
+    } catch (error) {
+      console.error('Error al enviar los datos:', error);
+      // Aquí podrías manejar errores, como mostrar un mensaje de error en la UI
+    } finally {
       setIsLoading(false);
-      console.log(data);
-    }, 2000);
+
+    }
+
+    setIsLoading(false);
   };
 
   return (
@@ -92,7 +106,7 @@ function CreatePage() {
                   }
 
                 </div>
-                
+
                 <div>
                   <Label htmlFor="hinicioL" className="block text-left mb-2">
                     Lunes
@@ -248,7 +262,7 @@ function CreatePage() {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <Label htmlFor="hinicioJ" className="block text-left mb-2">
                     Jueves
@@ -457,7 +471,7 @@ function CreatePage() {
                   </div>
                 </div>
 
-               
+
               </div>
             </CardContent>
             <CardFooter className="flex justify-end">
