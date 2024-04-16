@@ -94,19 +94,19 @@ function CreatePage() {
                 </div>
                 
                 <div>
-                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                  <Label htmlFor="hinicioL" className="block text-left mb-2">
                     Lunes
                   </Label>
 
                   <div className="flex space-x-4 justify-center items-center">
                     <Controller
-                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaInicial_tiempoLibreL" // This is the name attribute for the form control.
                       control={control}
 
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}  >
 
-                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                          <SelectTrigger id="hinicioL" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Inicial" />
                           </SelectTrigger>
                           <SelectContent position="popper" >
@@ -124,12 +124,12 @@ function CreatePage() {
 
 
                     <Controller
-                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaFinal_tiempoLibreL" // This is the name attribute for the form control.
                       control={control}
                       required
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}>
-                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                          <SelectTrigger id="hfinalL" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Final" />
                           </SelectTrigger>
                           <SelectContent position="popper">
@@ -146,19 +146,19 @@ function CreatePage() {
                 </div>
 
                 <div>
-                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                  <Label htmlFor="hinicioM" className="block text-left mb-2">
                     Martes
                   </Label>
 
                   <div className="flex space-x-4 justify-center items-center">
                     <Controller
-                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaInicial_tiempoLibreM" // This is the name attribute for the form control.
                       control={control}
 
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}  >
 
-                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                          <SelectTrigger id="hinicioM" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Inicial" />
                           </SelectTrigger>
                           <SelectContent position="popper" >
@@ -176,12 +176,12 @@ function CreatePage() {
 
 
                     <Controller
-                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaFinal_tiempoLibreM" // This is the name attribute for the form control.
                       control={control}
                       required
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}>
-                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                          <SelectTrigger id="hfinalM" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Final" />
                           </SelectTrigger>
                           <SelectContent position="popper">
@@ -198,19 +198,19 @@ function CreatePage() {
                 </div>
 
                 <div>
-                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                  <Label htmlFor="hinicioW" className="block text-left mb-2">
                     Miercoles
                   </Label>
 
                   <div className="flex space-x-4 justify-center items-center">
                     <Controller
-                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaInicial_tiempoLibreW" // This is the name attribute for the form control.
                       control={control}
 
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}  >
 
-                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                          <SelectTrigger id="hinicioW" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Inicial" />
                           </SelectTrigger>
                           <SelectContent position="popper" >
@@ -228,12 +228,12 @@ function CreatePage() {
 
 
                     <Controller
-                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaFinal_tiempoLibreW" // This is the name attribute for the form control.
                       control={control}
                       required
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}>
-                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                          <SelectTrigger id="hfinalW" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Final" />
                           </SelectTrigger>
                           <SelectContent position="popper">
@@ -250,19 +250,19 @@ function CreatePage() {
                 </div>
                 
                 <div>
-                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                  <Label htmlFor="hinicioJ" className="block text-left mb-2">
                     Jueves
                   </Label>
 
                   <div className="flex space-x-4 justify-center items-center">
                     <Controller
-                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaInicial_tiempoLibreJ" // This is the name attribute for the form control.
                       control={control}
 
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}  >
 
-                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                          <SelectTrigger id="hinicioJ" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Inicial" />
                           </SelectTrigger>
                           <SelectContent position="popper" >
@@ -280,12 +280,12 @@ function CreatePage() {
 
 
                     <Controller
-                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaFinal_tiempoLibreJ" // This is the name attribute for the form control.
                       control={control}
                       required
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}>
-                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                          <SelectTrigger id="hfinalJ" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Final" />
                           </SelectTrigger>
                           <SelectContent position="popper">
@@ -302,19 +302,19 @@ function CreatePage() {
                 </div>
 
                 <div>
-                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                  <Label htmlFor="hinicioV" className="block text-left mb-2">
                     Viernes
                   </Label>
 
                   <div className="flex space-x-4 justify-center items-center">
                     <Controller
-                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaInicial_tiempoLibreV" // This is the name attribute for the form control.
                       control={control}
 
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}  >
 
-                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                          <SelectTrigger id="hinicioV" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Inicial" />
                           </SelectTrigger>
                           <SelectContent position="popper" >
@@ -332,12 +332,12 @@ function CreatePage() {
 
 
                     <Controller
-                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaFinal_tiempoLibreV" // This is the name attribute for the form control.
                       control={control}
                       required
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}>
-                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                          <SelectTrigger id="hfinalV" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Final" />
                           </SelectTrigger>
                           <SelectContent position="popper">
@@ -354,19 +354,19 @@ function CreatePage() {
                 </div>
 
                 <div>
-                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                  <Label htmlFor="hinicioS" className="block text-left mb-2">
                     Sábado
                   </Label>
 
                   <div className="flex space-x-4 justify-center items-center">
                     <Controller
-                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaInicial_tiempoLibreS" // This is the name attribute for the form control.
                       control={control}
 
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}  >
 
-                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                          <SelectTrigger id="hinicioS" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Inicial" />
                           </SelectTrigger>
                           <SelectContent position="popper" >
@@ -384,12 +384,12 @@ function CreatePage() {
 
 
                     <Controller
-                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaFinal_tiempoLibreS" // This is the name attribute for the form control.
                       control={control}
                       required
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}>
-                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                          <SelectTrigger id="hfinalS" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Final" />
                           </SelectTrigger>
                           <SelectContent position="popper">
@@ -406,19 +406,19 @@ function CreatePage() {
                 </div>
 
                 <div>
-                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                  <Label htmlFor="hinicioD" className="block text-left mb-2">
                     Domingo
                   </Label>
 
                   <div className="flex space-x-4 justify-center items-center">
                     <Controller
-                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaInicial_tiempoLibreD" // This is the name attribute for the form control.
                       control={control}
 
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}  >
 
-                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                          <SelectTrigger id="hinicioD" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Inicial" />
                           </SelectTrigger>
                           <SelectContent position="popper" >
@@ -436,12 +436,12 @@ function CreatePage() {
 
 
                     <Controller
-                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      name="horaFinal_tiempoLibreD" // This is the name attribute for the form control.
                       control={control}
                       required
                       render={({ field }) => (
                         <Select onValueChange={field.onChange} value={field.value}>
-                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                          <SelectTrigger id="hfinalD" className="bg-neutral-50">
                             <SelectValue placeholder="Hora Final" />
                           </SelectTrigger>
                           <SelectContent position="popper">
