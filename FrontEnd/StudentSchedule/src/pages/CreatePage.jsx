@@ -40,7 +40,11 @@ function CreatePage() {
 
     try {
       // Realiza la petición POST utilizando axios
-      const response = await axios.post('https://localhost:8000/study-plan', data);
+      const response = await axios.post('http://localhost:8000/study-plan', data, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       console.log('Respuesta del servidor:', response.data);
       // Aquí podrías manejar la respuesta y actualizar el estado o UI según sea necesario
     } catch (error) {
