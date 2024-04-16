@@ -92,10 +92,10 @@ function CreatePage() {
                   }
 
                 </div>
-
+                
                 <div>
                   <Label htmlFor="hinicio" className="block text-left mb-2">
-                    Horario
+                    Lunes
                   </Label>
 
                   <div className="flex space-x-4 justify-center items-center">
@@ -144,6 +144,320 @@ function CreatePage() {
                     />
                   </div>
                 </div>
+
+                <div>
+                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                    Martes
+                  </Label>
+
+                  <div className="flex space-x-4 justify-center items-center">
+                    <Controller
+                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}  >
+
+                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Inicial" />
+                          </SelectTrigger>
+                          <SelectContent position="popper" >
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time} >
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+
+                      )}
+
+                    />
+
+
+                    <Controller
+                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+                      required
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Final" />
+                          </SelectTrigger>
+                          <SelectContent position="popper">
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time}>
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                    Miercoles
+                  </Label>
+
+                  <div className="flex space-x-4 justify-center items-center">
+                    <Controller
+                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}  >
+
+                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Inicial" />
+                          </SelectTrigger>
+                          <SelectContent position="popper" >
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time} >
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+
+                      )}
+
+                    />
+
+
+                    <Controller
+                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+                      required
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Final" />
+                          </SelectTrigger>
+                          <SelectContent position="popper">
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time}>
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                    Jueves
+                  </Label>
+
+                  <div className="flex space-x-4 justify-center items-center">
+                    <Controller
+                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}  >
+
+                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Inicial" />
+                          </SelectTrigger>
+                          <SelectContent position="popper" >
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time} >
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+
+                      )}
+
+                    />
+
+
+                    <Controller
+                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+                      required
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Final" />
+                          </SelectTrigger>
+                          <SelectContent position="popper">
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time}>
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                    Viernes
+                  </Label>
+
+                  <div className="flex space-x-4 justify-center items-center">
+                    <Controller
+                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}  >
+
+                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Inicial" />
+                          </SelectTrigger>
+                          <SelectContent position="popper" >
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time} >
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+
+                      )}
+
+                    />
+
+
+                    <Controller
+                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+                      required
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Final" />
+                          </SelectTrigger>
+                          <SelectContent position="popper">
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time}>
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                    Sábado
+                  </Label>
+
+                  <div className="flex space-x-4 justify-center items-center">
+                    <Controller
+                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}  >
+
+                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Inicial" />
+                          </SelectTrigger>
+                          <SelectContent position="popper" >
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time} >
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+
+                      )}
+
+                    />
+
+
+                    <Controller
+                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+                      required
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Final" />
+                          </SelectTrigger>
+                          <SelectContent position="popper">
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time}>
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="hinicio" className="block text-left mb-2">
+                    Domingo
+                  </Label>
+
+                  <div className="flex space-x-4 justify-center items-center">
+                    <Controller
+                      name="horaInicial_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}  >
+
+                          <SelectTrigger id="hinicio" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Inicial" />
+                          </SelectTrigger>
+                          <SelectContent position="popper" >
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time} >
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+
+                      )}
+
+                    />
+
+
+                    <Controller
+                      name="horaFinal_tiempoLibre" // This is the name attribute for the form control.
+                      control={control}
+                      required
+                      render={({ field }) => (
+                        <Select onValueChange={field.onChange} value={field.value}>
+                          <SelectTrigger id="hfinal" className="bg-neutral-50">
+                            <SelectValue placeholder="Hora Final" />
+                          </SelectTrigger>
+                          <SelectContent position="popper">
+                            {times.map((time) => (
+                              <SelectItem key={time} value={time}>
+                                {time}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      )}
+                    />
+                  </div>
+                </div>
+
+               
               </div>
             </CardContent>
             <CardFooter className="flex justify-end">
