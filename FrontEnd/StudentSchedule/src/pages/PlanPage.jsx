@@ -6,7 +6,7 @@ function PlanPage() {
 
     // Accede al estado pasado con navigate
     const { state } = useLocation();
-    //const planes = JSON.parse(state).planEstudio;
+    const planes = JSON.parse(state).planEstudio;
 
     return (
         <div className="flex items-center justify-center h-full flex-wrap">
