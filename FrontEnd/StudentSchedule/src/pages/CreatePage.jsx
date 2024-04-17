@@ -20,7 +20,9 @@ import {
 } from "@/components/ui/select";
 import { useForm, Controller } from "react-hook-form";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 function CreatePage() {
+  const navigate = useNavigate();
   //manejar las horas
   const times = Array.from({ length: 48 }, (_, index) => {
     const hour = Math.floor(index / 2);
@@ -46,6 +48,8 @@ function CreatePage() {
         }
       });
       console.log('Respuesta del servidor:', response.data);
+      navigate(`/Plan/${response.data}`);
+      navigate('/Plan',{state:response.data});
       // Aquí podrías manejar la respuesta y actualizar el estado o UI según sea necesario
     } catch (error) {
       console.error('Error al enviar los datos:', error);
