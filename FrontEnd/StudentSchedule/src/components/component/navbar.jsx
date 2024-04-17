@@ -5,13 +5,12 @@ import { Button } from "@/components/ui/button";
 const routes = [
   ["Inicio", "/"],
   ["Crear Plan", "/create"],
-  ["Nosotros", "/About"],
 ];
 export function Navbar() {
   return (
     <header
       key="1"
-      className="flex items-center h-14 px-4 md:px-6 w-full shrink-0"
+      className="flex items-center h-16 px-4 md:px-6 w-full shrink-0 shadow-lg"
     >
       <NavLink className="mr-6" to="/">
         <SunIcon className="h-6 w-6" />
@@ -26,7 +25,7 @@ export function Navbar() {
       </div>
       <div className="ml-auto">
         <Button
-          className="w-8 h-8 rounded-full border-2 border-gray-100 mt-8"
+          className="w-8 h-8 rounded-full border-2 border-gray-100 mt-4"
           size="icon"
           variant="outline"
         >

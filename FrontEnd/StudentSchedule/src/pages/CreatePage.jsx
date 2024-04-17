@@ -64,8 +64,8 @@ function CreatePage() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className=" animate__animated animate__bounceInDown ">
-        <div className="flex justify-center items-center h-screen ">
+      <form onSubmit={handleSubmit(onSubmit)} className=" animate__animated animate__bounceInDown">
+        <div className="flex justify-center items-center my-8">
           <Card className="w-[750px] bg-gray-100">
             <CardHeader>
               <CardTitle className="text-3xl flex justify-center">
