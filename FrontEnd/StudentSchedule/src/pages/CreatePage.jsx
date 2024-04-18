@@ -49,7 +49,7 @@ function CreatePage() {
       });
       console.log('Respuesta del servidor:', response.data);
       navigate(`/Plan/${response.data}`);
-      navigate('/Plan',{state:response.data});
+      navigate('/Plan', { state: response.data });
       // Aquí podrías manejar la respuesta y actualizar el estado o UI según sea necesario
     } catch (error) {
       console.error('Error al enviar los datos:', error);
@@ -64,11 +64,11 @@ function CreatePage() {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)} className=" animate__animated animate__bounceInDown">
+      <form onSubmit={handleSubmit(onSubmit)} className=" animate__animated animate__bounceInDown ">
         <div className="flex justify-center items-center my-8">
-          <Card className="w-[750px] bg-gray-100">
+          <Card className="w-[750px] bg-purple-300">
             <CardHeader>
-              <CardTitle className="text-3xl flex justify-center">
+              <CardTitle className="text-3xl flex justify-center font-bold ">
                 Crea tu plan de estudios
               </CardTitle>
             </CardHeader>
@@ -483,7 +483,7 @@ function CreatePage() {
               </div>
             </CardContent>
             <CardFooter className="flex justify-end">
-              <Button onClick={handleSubmit} disabled={isLoading}>
+              <Button onClick={handleSubmit} disabled={isLoading} className='inline-flex h-9 items-center justify-center rounded-md  bg-purple-950 px-4 py-2 text-sm font-medium  transition-colors hover:bg-purple-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-purple-400 dark:text-gray-900 dark:hover:bg-purple-800 dark:focus-visible:ring-gray-300 shadow-lg w-full'>
                 {isLoading ? (
                   <>
                     <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
