@@ -42,7 +42,7 @@ function CreatePage() {
 
     try {
       // Realiza la petición POST utilizando axios
-      const response = await axios.post('http://localhost:8000/study-plan', data, {
+      const response = await axios.post('https://llm-api-3.onrender.com', data, {
         headers: {
           'Content-Type': 'application/json'
         }
