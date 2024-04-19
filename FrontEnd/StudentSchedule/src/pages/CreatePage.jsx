@@ -42,7 +42,7 @@ function CreatePage() {
 
     try {
       // Realiza la petición POST utilizando axios
-      const response = await axios.post('http://127.0.0.1:8000', data, {
+      const response = await axios.post('http://127.0.0.1:8000/study-plan', data, {
         headers: {
           'Content-Type': 'application/json'
         }
